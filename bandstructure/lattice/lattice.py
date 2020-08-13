@@ -47,6 +47,8 @@ class Lattice():
         automaticSpecialPoints = { }
 
         # === standardize the lattice vectors ===
+        # --- Making certain lattice vectors and products give standard, positive values. e.g. Area  = v1xv2 ---
+
         if self.getDimensionality() >= 1:
             vec1 = self.__vecsReciprocal[0]
             if np.vdot(vec1,[1,0]) < 0: vec1 *= -1
@@ -110,6 +112,7 @@ class Lattice():
         return automaticSpecialPoints
 
     def addSpecialPoint(self,label,pos):
+		#---Look at lines 105-107: the point you define is np.dot()'ed with the reciprocal lattice vectors. Define point therefore in units of the RLV's---#
         """Add a special point."""
 
         self.__specialPoints[label] = pos

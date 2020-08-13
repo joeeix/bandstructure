@@ -7,3 +7,4 @@ from .kagomelattice import KagomeLattice
 from .rubylattice import RubyLattice
 from .lieblattice import LiebLattice
 from .regularchain import RegularChain
+from .triangularlattice import TriangularLattice

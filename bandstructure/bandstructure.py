@@ -114,7 +114,7 @@ class Bandstructure:
                 or not np.isclose((self.kvectors.points[0,1]-self.kvectors.points[0,0])*self.kvectors.shape[0], self.params['lattice'].vecsReciprocal[0], rtol=1e-6).all():
                 raise Exception("Only supports rhomboidal k-space arrays")
 
-            # choosen eigenvectors
+            # chosen eigenvectors
             vecn = self.states[...,band]
 
             # division of the BZ
